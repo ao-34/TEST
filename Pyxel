@@ -1,0 +1,95 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ao-34/TEST/blob/main/Pyxel\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "import math\n",
+        "\n",
+        "def calc_distance(pos1,pos2):\n",
+        "  diff_x = pos1[0] - pos2[0]\n",
+        "  diff_y = pos1[1] - pos2[1]\n",
+        "  return math.sqrt(diff_x**2 + diff_y**2)\n",
+        "\n",
+        "def generate_position(BOARD_SIZE):\n",
+        "  return [random.randrange(0,BOARD_SIZE),random.randrange(0,BOARD_SIZE)]\n",
+        "\n",
+        "def move_player(pos_c,direction):\n",
+        "  if direction == \"n\":\n",
+        "    pos_c[1] += -1\n",
+        "  elif direction == \"s\":\n",
+        "    pos_c[1] += 1\n",
+        "  elif direction == \"w\":\n",
+        "    pos_c[0] += - 1\n",
+        "  elif direction == \"e\":\n",
+        "    pos_c[0] += 1\n",
+        "  return pos_c"
+      ],
+      "metadata": {
+        "id": "O65lLpJshocC"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pip install pyxel"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oqxFdy4b8N7M",
+        "outputId": "4dd8c7a8-f84b-4880-d78c-68df84aa0f09"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Collecting pyxel\n",
+            "  Downloading pyxel-2.3.18-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (33 kB)\n",
+            "Downloading pyxel-2.3.18-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.4 MB)\n",
+            "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m4.4/4.4 MB\u001b[0m \u001b[31m26.8 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n",
+            "\u001b[?25hInstalling collected packages: pyxel\n",
+            "Successfully installed pyxel-2.3.18\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "otSRrUkk8bzL"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Knock",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
